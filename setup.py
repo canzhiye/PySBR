@@ -27,5 +27,5 @@ setup(
         lines moneyline
     """,
     include_package_data=True,
-    install_requires=["gql", "pandas", "pytz", "pyyaml", "fake-useragent"],
+    install_requires=["gql", "pandas", "pytz", "pyyaml"],
 )
