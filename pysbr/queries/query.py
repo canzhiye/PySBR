@@ -33,7 +33,7 @@ class Query:
         self._fields = utils.load_yaml((utils.build_yaml_path("fields")))
 
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36",
             "Content-Type": "application/json",
             "Accept": "application/json, text/plain, */*",
             "Accept-Encoding": "gzip, deflate, br",
