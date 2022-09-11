@@ -20,7 +20,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.9",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.7",
     packages=find_packages(exclude=["tests", "tests.*"]),
     keywords="""
         sportsbookreview sportsbook review betting api gambling sports graphql odds
