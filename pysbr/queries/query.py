@@ -7,7 +7,6 @@ from functools import wraps
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
 import pandas as pd
-from fake_useragent import UserAgent
 
 import pysbr.utils as utils
 from pysbr.config.config import Config
@@ -33,19 +32,18 @@ class Query:
         self._arguments = utils.load_yaml((utils.build_yaml_path("arguments")))
         self._fields = utils.load_yaml((utils.build_yaml_path("fields")))
 
-        ua = UserAgent()
         headers = {
-            "User-Agent": ua.random,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
             "Content-Type": "application/json",
             "Accept": "application/json, text/plain, */*",
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
             "Connection": "keep-alive",
-            "Host": "www.sportsbookreview.com",
-            "Referer": "https://www.sportsbookreview.com/betting-odds/",
+            "Origin": "https://www.bookmakersreview.com",
+            "Referer": "https://www.bookmakersreview.com/betting-odds/",
         }
         transport = RequestsHTTPTransport(
-            url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service",
+            url="https://ms.virginia.us-east-1.bookmakersreview.com/ms-odds-v2/odds-v2-service",
             headers=headers,
         )
         self.client = Client(transport=transport, fetch_schema_from_transport=False)
