@@ -43,7 +43,7 @@ class Query:
             "Referer": "https://www.bookmakersreview.com/betting-odds/",
         }
         transport = RequestsHTTPTransport(
-            url="https://ms.virginia.us-east-1.bookmakersreview.com/ms-odds-v2/odds-v2-service",
+            url="https://ms.production-us-east-1.bookmakersreview.com/ms-odds-v2/odds-v2-service",
             headers=headers,
         )
         self.client = Client(transport=transport, fetch_schema_from_transport=False)
